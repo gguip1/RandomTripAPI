@@ -31,7 +31,6 @@ public class RandomCoordinateService {
 
     private Coordinate generateRandomCoordinate(MinMaxCoordinate minMaxCoordinate) {
         Random random = new Random();
-
         double randomLatitude = minMaxCoordinate.getMinLatitude() + (minMaxCoordinate.getMaxLatitude() - minMaxCoordinate.getMinLatitude()) * random.nextDouble();
         double randomLongitude = minMaxCoordinate.getMinLongitude() + (minMaxCoordinate.getMaxLongitude() - minMaxCoordinate.getMinLongitude()) * random.nextDouble();
 
