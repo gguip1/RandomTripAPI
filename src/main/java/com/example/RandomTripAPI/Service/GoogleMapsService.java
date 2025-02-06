@@ -1,13 +1,8 @@
 package com.example.RandomTripAPI.Service;
 
 import io.github.cdimascio.dotenv.Dotenv;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.logging.Logger;
 
 @Service
 public class GoogleMapsService {
@@ -19,7 +14,9 @@ public class GoogleMapsService {
 
         public GoogleMapsService(RestTemplate restTemplate) {
             this.restTemplate = restTemplate;
-            this.apiKey = dotenv.get("GOOGLE_MAPS_API_KEY");
+
+//            this.apiKey = dotenv.get("GOOGLE_MAPS_API_KEY");
+            this.apiKey = System.getenv("GOOGLE_MAPS_API_KEY");
 
             if (this.apiKey == null || this.apiKey.isEmpty()) {
                 throw new IllegalStateException("Google Maps API Key is missing or invalid in .env file.");
