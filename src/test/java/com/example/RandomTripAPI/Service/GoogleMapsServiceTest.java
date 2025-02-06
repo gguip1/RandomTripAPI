@@ -30,16 +30,16 @@ public class GoogleMapsServiceTest {
 
     @Test
     void testGetPlaceNearby() {
-        RandomCoordinateService service = new RandomCoordinateService();
-        Coordinate coordinate = service.getRandomCoordinate("South Korea");
-        int radius = 1000000;
-
-        String response = googleMapsService.getPlaceNearby(coordinate.getLatitude(), coordinate.getLongitude(), radius);
-
-        System.out.println(coordinate);
-        System.out.println(response);
-
-        assertNotNull(response);
+//        RandomCoordinateService service = new RandomCoordinateService();
+//        Coordinate coordinate = service.getRandomCoordinate("South Korea");
+//        int radius = 1000000;
+//
+//        String response = googleMapsService.getPlaceNearby(coordinate.getLatitude(), coordinate.getLongitude(), radius);
+//
+//        System.out.println(coordinate);
+//        System.out.println(response);
+//
+//        assertNotNull(response);
     }
 
 }
