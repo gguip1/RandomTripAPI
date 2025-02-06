@@ -1,5 +1,6 @@
 package com.example.RandomTripAPI.Service;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -10,8 +11,9 @@ import java.util.logging.Logger;
 
 @Service
 public class GoogleMapsService {
-        @Value("${google.maps.api.key}")
-        private String apiKey;
+        private final Dotenv dotenv = Dotenv.load();
+
+        private final String apiKey = dotenv.get("google_maps_api_key");
 
         private final RestTemplate restTemplate;
 
