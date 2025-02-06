@@ -13,12 +13,13 @@ import java.util.logging.Logger;
 public class GoogleMapsService {
         private final Dotenv dotenv = Dotenv.load();
 
-        private final String apiKey = dotenv.get("google_maps_api_key");
+        private final String apiKey;
 
         private final RestTemplate restTemplate;
 
         public GoogleMapsService(RestTemplate restTemplate) {
             this.restTemplate = restTemplate;
+            this.apiKey = dotenv.get("GOOGLE_MAPS_API_KEY");
         }
 
         public String getPlaceNearby(double latitude, double longitude, int radius) {
