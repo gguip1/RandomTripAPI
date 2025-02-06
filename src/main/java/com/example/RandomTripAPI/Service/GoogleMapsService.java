@@ -20,6 +20,10 @@ public class GoogleMapsService {
         public GoogleMapsService(RestTemplate restTemplate) {
             this.restTemplate = restTemplate;
             this.apiKey = dotenv.get("GOOGLE_MAPS_API_KEY");
+
+            if (this.apiKey == null || this.apiKey.isEmpty()) {
+                throw new IllegalStateException("Google Maps API Key is missing or invalid in .env file.");
+            }
         }
 
         public String getPlaceNearby(double latitude, double longitude, int radius) {
