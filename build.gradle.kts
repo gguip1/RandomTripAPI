@@ -28,6 +28,8 @@ dependencies {
 
 	implementation("com.fasterxml.jackson.core:jackson-databind")
 
+	implementation("io.github.cdimascio:java-dotenv:5.2.2")
+
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	annotationProcessor("org.projectlombok:lombok")
