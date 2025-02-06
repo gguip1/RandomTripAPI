@@ -36,4 +36,4 @@
 - [ ] 랜덤 좌표 기반 주변 여행지 정보 제공 API
 
 ### 🔹Production URL
-- [https://random-coordinate-api.herokuapp.com/api/random-coordinate?nation=South%20Korea](https://random-coordinate-api.herokuapp.com/api/random-coordinate?nation=South%20Korea)
+- [한국 랜덤 좌표](https://old-stace-gguip1-1d7c5e3e.koyeb.app/api/random-coordinate?nation=South%20Korea)
