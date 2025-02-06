@@ -13,7 +13,7 @@
 
 ### 🔹 요청 예시
 ```bash
-  curl -X GET "http://localhost:8080/api/random-coordinate?nation=South%20Korea"
+  curl -X GET "https://old-stace-gguip1-1d7c5e3e.koyeb.app/api/random-coordinate?nation=South%20Korea"
 ```
 
 ### 🔹 응답 필드
