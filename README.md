@@ -1,20 +1,17 @@
-## 🌀그저 랜덤 좌표를 반환해주는 API
+# 🌀그저 랜덤 좌표를 반환해주는 API
 
-### #️⃣ 랜덤 좌표 생성 API
+## #️⃣ 랜덤 좌표 생성 API
 - 랜덤 좌표를 생성해주는 API입니다.
 
-### 📍 Endpoint
+## 📍 Endpoint
 `GET /api/random-coordinate`
-
-### 📌 요청 파라미터 (Query Parameters)
-| **파라미터**  | **타입**  | **필수 여부** | **설명** |
-|:------------|:------|:--------|:----------------|
-| `nation`   | `string` | ✅ 필수 | 조회할 국가 이름 (예: `South Korea`) |
 
 ### 🔹 요청 예시
 ```bash
-  curl -X GET "http://localhost:8080/api/random-coordinate?nation=South%20Korea"
+  curl -X GET "https://old-stace-gguip1-1d7c5e3e.koyeb.app/api/random-coordinate"
 ```
+
+## ✅ 성공 시 (200 OK)
 
 ### 🔹 응답 필드
 | **필드**      | **타입**  | **설명** |
@@ -32,8 +29,16 @@
 }
 ```
 
-### 🔹추후 작업
-- [ ] 랜덤 좌표 기반 주변 여행지 정보 제공 API
+## ❌ 실패 시 (404 NOT FOUND)
+
+### 🔹 응답 필드
+| **필드**      | **타입**   | **설명** |
+|:------------|:---------|:--------|
+| `timestamp`   | `string` | 오류 발생 시간 |
+| `status` | `int`    | HTTP 상태 코드 |
+| `error`| `string` | 오류 유형 |
+| `message` | `string`    | 오류 메시지 |
+| `path`| `string` | 요청한 API 경로 |
 
 ### 🔹Production URL
-- [한국 랜덤 좌표](https://old-stace-gguip1-1d7c5e3e.koyeb.app/api/random-coordinate?nation=South%20Korea)
+- [한국 랜덤 좌표](https://old-stace-gguip1-1d7c5e3e.koyeb.app/api/random-coordinate)

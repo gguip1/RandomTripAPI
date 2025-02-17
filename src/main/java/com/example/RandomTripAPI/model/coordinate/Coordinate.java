@@ -1,4 +1,4 @@
-package com.example.RandomTripAPI.Model;
+package com.example.RandomTripAPI.model.coordinate;
 
 import lombok.Getter;
 import lombok.Setter;
