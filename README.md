@@ -39,6 +39,3 @@
 | `error`| `string` | 오류 유형 |
 | `message` | `string`    | 오류 메시지 |
 | `path`| `string` | 요청한 API 경로 |
-
-### 🔹Production URL
-- [한국 랜덤 좌표](https://old-stace-gguip1-1d7c5e3e.koyeb.app/api/random-coordinate)
